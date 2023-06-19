@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'google-dark': '#bdc1c6',
+        'google-dark': '#202124',
       },
       height: {
         15: '3.75rem',
