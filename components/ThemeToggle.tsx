@@ -11,7 +11,7 @@ export default function ThemeToggle({}: Props) {
   const { theme, systemTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [bTheme, setbTheme] = useState(
-    typeof window === 'undefined' && systemTheme
+    typeof window !== 'undefined' && systemTheme
       ? systemTheme
       : localStorage.getItem('theme') != ''
       ? localStorage.getItem('theme')
@@ -29,11 +29,8 @@ export default function ThemeToggle({}: Props) {
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    try {
-      localStorage.setItem('theme', theme as string);
-    } finally {
-      setbTheme(theme as string);
-    }
+    localStorage.setItem('theme', theme as string);
+    setbTheme(theme as string);
   }, [theme]);
 
   return (
