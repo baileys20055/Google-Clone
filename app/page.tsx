@@ -9,7 +9,7 @@ export default function Home({}: Props) {
   return (
     <>
       <HomeHeader />
-      <div className="mt-24 flex flex-col items-center w-full h-auto">
+      <div className="mt-24 flex flex-col items-center">
         <Image
           width={300}
           height={100}

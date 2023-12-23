@@ -5,7 +5,7 @@ import CountryLookup from './CountryLookup';
 export default function Footer() {
   return (
     <footer className="absolute bottom-0 w-full bg-[#f2f2f2] text-sm text-gray-500 dark:bg-[#171717]">
-      <div className="border-b px-8 py-3 dark:border-gray-700">
+      <div className="border-b px-8 py-3 h-12 dark:border-gray-700">
         <CountryLookup />
       </div>
       <div className="flex flex-col items-center justify-between px-8 py-3 sm:flex-row">
