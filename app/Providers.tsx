@@ -6,7 +6,12 @@ type Props = { children: React.ReactNode };
 
 export default function Providers({ children }: Props) {
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
+    <ThemeProvider
+      enableSystem={true}
+      enableColorScheme={true}
+      disableTransitionOnChange={true}
+      attribute="class"
+    >
       <div className="dark:google-dark min-h-screen select-none transition-colors duration-300">
         {children}
       </div>

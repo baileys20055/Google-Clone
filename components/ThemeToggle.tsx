@@ -33,7 +33,9 @@ export default function ThemeToggle({}: Props) {
     setbTheme(theme as string);
   }, [theme]);
 
-  return (
+  return !mounted ? (
+    <div className='h-5 ml-1 text-xl p-2'></div>
+  ) : (
     <>
       <button
         className="z-[100] flex items-center"
