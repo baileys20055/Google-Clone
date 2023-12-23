@@ -44,7 +44,7 @@ export default function HomeHeader({}: Props) {
             Images
           </Link>
           <TbGridDots className="rounded-full bg-transparent p-2 text-4xl hover:bg-gray-200 dark:hover:bg-gray-800" />
-          <button className="rounded-md bg-blue-500 px-6 py-2 font-medium text-white transition-shadow hover:shadow-md hover:brightness-105">
+          <button className="rounded-md bg-blue-500 px-6 py-2 font-medium hover:bg-[#1b66c9] text-white transition-shadow hover:shadow-md hover:brightness-105">
             Sign In
           </button>
         </div>

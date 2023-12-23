@@ -10,7 +10,7 @@ export default function Home({}: Props) {
     <>
       <HomeHeader />
 
-      <div className="m-24 flex flex-col items-center">
+      <div className="mt-24 flex flex-col items-center">
         <Image
           width={300}
           height={100}
@@ -19,9 +19,8 @@ export default function Home({}: Props) {
           }
           alt="Google"
         />
-
-        <HomeSearch />
       </div>
+      <HomeSearch />
     </>
   );
 }

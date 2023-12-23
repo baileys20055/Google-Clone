@@ -13,7 +13,9 @@ export default function ThemeToggle({}: Props) {
   const [bTheme, setbTheme] = useState(
     typeof window === 'undefined' && systemTheme
       ? systemTheme
-      : localStorage.getItem('theme') || 'dark'
+      : localStorage.getItem('theme') != ''
+      ? localStorage.getItem('theme')
+      :  'dark'
   );
 
   const handleClick = () => {
