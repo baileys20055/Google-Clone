@@ -8,11 +8,13 @@ export default function CountryLookup() {
 
   //http://ip-api.com/json/
 
+  // https://api.geoapify.com/v1/ipinfo?&apiKey=
+
   useEffect(() => {
-    fetch(`http://ip-api.com/json/`)
+    fetch(`https://api.geoapify.com/v1/ipinfo?&apiKey=${process.env.NEXT_PUBLIC_IP_API_KEY}`)
       .then(async (res) => await res.json())
-      .then((data) => setCountry(data.country));
+      .then((data) => setCountry(data.country.name));
   }, []);
 
-  return !country ? <div className='p-2 h-5'></div> : <div>{country}</div>;
+  return <div>{country}</div>;
 }
